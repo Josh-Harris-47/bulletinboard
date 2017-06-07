@@ -7,7 +7,7 @@ const seq = new Seq(connectionString);
 
 var Messages = seq.define('messages', {
   id: {type: Seq.INTEGER, autoIncrement: true, primaryKey: true},
-  // title: {type: Seq.STRING, unique: true},
+  title: Seq.STRING,
   body: Seq.STRING
   }
 );

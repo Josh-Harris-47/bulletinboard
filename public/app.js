@@ -3,9 +3,11 @@ $('#formthing').on('submit',function(e){
   $.ajax({
     method: "POST",
     url: '/message',
-    data: {body: $('#text').val()}
+    data: {
+            body: $('#text').val(),
+            title: $('#title').val()
+          }
   }).then(function(res){
-    console.log(res);
     window.location.href="/messages.html"
   });
 });
